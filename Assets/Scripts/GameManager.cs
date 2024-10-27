@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject _pauseCanvas;
 
+    [SerializeField] GameObject _gameOver;
+
     
 
     
@@ -82,6 +84,11 @@ public class GameManager : MonoBehaviour
         {
         hudStars[currentStars].sprite=brightStar;
         currentStars+=1;
+        }
+
+        if(currentStars == 5)
+        {
+            SceneLoader("Victory");
         }
         
 
