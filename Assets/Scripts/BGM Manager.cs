@@ -10,6 +10,18 @@ public class BGMManager : MonoBehaviour
     private AudioSource _audioSource;
 
     public AudioClip backgroundMusic;
+
+   
+  
+  
+  void Start()
+  {
+    PlayBGM(backgroundMusic);
+
+    
+  }
+  
+  
    void Awake()
    {
         if(instance != null && instance != this)  //singelton, sirve para acceder desde otro scripts, evita que haya mas de un gamemanager, y se puede acceder facilmente a todo lo que haya dentro
@@ -25,7 +37,7 @@ public class BGMManager : MonoBehaviour
 
         _audioSource.loop = true;
         _audioSource.mute = false;
-        _audioSource.volume = 1;
+        _audioSource.volume = 0.3f;
 
     }
 

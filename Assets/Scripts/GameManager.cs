@@ -82,6 +82,8 @@ public class GameManager : MonoBehaviour
     public void Addstar()
     {
         
+      
+
         if(currentStars<5)
         {
         hudStars[currentStars].sprite=brightStar;

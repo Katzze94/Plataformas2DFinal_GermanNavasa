@@ -23,6 +23,8 @@ public class SoundManager : MonoBehaviour
 
     public AudioClip atackAudio;
 
+    public AudioClip deathAudio;
+
 
 
 

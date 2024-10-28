@@ -12,10 +12,12 @@ public class Star : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("Player"))
         {
-          GameManager.instance.Addstar();
-           Destroy(gameObject, 0.1f);
+         
+            SoundManager.instance.PlaySFX(SoundManager.instance._audioSource ,SoundManager.instance.starAudio);
+            GameManager.instance.Addstar();
+            Destroy(gameObject, 0.1f);
 
-           SoundManager.instance.PlaySFX(SoundManager.instance._audioSource ,SoundManager.instance.starAudio);
+           
         }
     }
 

@@ -48,6 +48,8 @@ public class PlayerController : MonoBehaviour
         _currentHealth= _maxHealth;
 
         GameManager.instance.SetHealthBar(_maxHealth);
+
+        
    
     }
 
@@ -176,6 +178,7 @@ public class PlayerController : MonoBehaviour
     {
         Collider2D[] collider = Physics2D.OverlapCircleAll(attackHitBox.position, attackRadius);
         foreach(Collider2D enemy in collider)
+        
        {
             if(enemy.gameObject.CompareTag("Mimic")) //mejor forma de utilizar los tags
             {
@@ -203,7 +206,9 @@ public class PlayerController : MonoBehaviour
 
         if(_currentHealth <= 0) 
         {
+            
             Die();  //resta de 1 en 1 al valor actual
+            
             SceneLoader("Game Over");
         }
 
@@ -223,7 +228,10 @@ public class PlayerController : MonoBehaviour
     }
     void Die()
     {
+       
+        
         characterAnimator.SetTrigger("IsDead");
+        SoundManager.instance.PlaySFX(SoundManager.instance._audioSource ,SoundManager.instance.deathAudio);
         Destroy(gameObject, 0.47f);
 
         
