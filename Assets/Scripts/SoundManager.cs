@@ -18,6 +18,8 @@ public class SoundManager : MonoBehaviour
 
     public AudioClip mimicAudio;
 
+    public AudioClip starAudio;
+
 
 
     void Awake()
