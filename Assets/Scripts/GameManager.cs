@@ -68,6 +68,8 @@ public class GameManager : MonoBehaviour
     {
         coins++;  //esto añade 1 en 1 al valor inicial
         _coinText.text = coins.ToString();
+
+        SoundManager.instance.PlaySFX(SoundManager.instance._audioSource ,SoundManager.instance.coinAudio);
     }
 
 

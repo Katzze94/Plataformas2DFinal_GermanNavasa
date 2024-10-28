@@ -169,6 +169,7 @@ public class PlayerController : MonoBehaviour
     {
         isAttacking = true;
         characterAnimator.SetTrigger("Attack");
+        SoundManager.instance.PlaySFX(SoundManager.instance._audioSource ,SoundManager.instance.atackAudio);
     }
 
     void Attack()
@@ -241,8 +242,10 @@ public class PlayerController : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("Health"))
         {
+            SoundManager.instance.PlaySFX(SoundManager.instance._audioSource ,SoundManager.instance.healthAudio);
             HealthUp(1);
             Destroy(collider.gameObject);
+            
 
         }
 

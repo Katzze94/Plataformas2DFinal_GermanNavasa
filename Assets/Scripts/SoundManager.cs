@@ -11,6 +11,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource _audioSource;
     public AudioClip coinAudio;
     public AudioClip jumpAudio;
+    public AudioClip healthAudio;
 
     public AudioClip hurtAudio;
 
@@ -19,6 +20,10 @@ public class SoundManager : MonoBehaviour
     public AudioClip mimicAudio;
 
     public AudioClip starAudio;
+
+    public AudioClip atackAudio;
+
+
 
 
 
